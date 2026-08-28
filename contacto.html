@@ -7,55 +7,39 @@
         <title>Contacto | Mi ECommerce</title>
     </head>
 
-    <body>
+    <body class="m-0 font-[Arial,sans-serif]">
         <header>
-            <h1>Mi ECommerce</h1>
-
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="#">Productos</a>
-                <a href="contacto.html">Contacto</a>
+            <h1 class="ml-[1%] font-[Arial] text-[15px] font-bold">Mi ECommerce</h1>
+            <nav class="bg-[blue] p-[15px]">
+                <a class="mr-[15px] text-white" href="index.html">Inicio</a>
+                <a class="mr-[15px] text-white" href="#">Productos</a>
+                <a class="mr-[15px] text-white" href="contacto.html">Contacto</a>
             </nav>
         </header>
 
-        <main>
-            <h2>Formulario de contacto</h2>
+        <main class="mt-[5%] p-[20px] text-center">
+            <h2 class="mb-4 font-bold text-[24px]">Formulario de contacto</h2>
 
             <form onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre">
-                </div>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
 
-                <div class="mb-3">
-                    <label for="correo" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="correo">
-                </div>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
 
-                <div class="mb-3">
-                    <label for="telefono" class="form-label">Teléfono</label>
-                    <input type="text" class="form-control" id="telefono">
-                </div>
+                <label for="mensaje">Mensaje:</label>
+                <textarea class="area_texto" id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    Enviar
-                </button>
-
+                <button type="submit">Enviar</button>
             </form>
         </main>
 
-        <footer>
-            <p>
-                Equipo: Benjamín Cubillos - Cristobal Pardo -
-                Renato Troncoso | 2026
-            </p>
+        <footer class="mt-[30%] bg-black p-[15px] text-center text-white">
+            <p>Equipo: Benjamín Cubillos - Cristobal Pardo - Renato Troncoso | 2026</p>
         </footer>
-        <script src="funciones.js"></script>
+        <script src="./assets/js/funciones.js"></script>
     </body>
 </html>

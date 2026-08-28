@@ -5,47 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Estadísticas - Lo quieres, te lo vendo</title>
+    <title>Estadísticas | Mi ECommerce</title>
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
 
     <link
         rel="stylesheet"
         href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
 
-    <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body>
+<body class="m-0 font-[Arial,sans-serif]">
+    <header>
+        <h1 class="ml-[1%] font-[Arial] text-[15px] font-bold">Mi ECommerce</h1>
+        <nav class="bg-[blue] p-[15px]">
+            <a class="mr-[15px] text-white" href="index.html">Inicio</a>
+            <a class="mr-[15px] text-white" href="#">Productos</a>
+            <a class="mr-[15px] text-white" href="contacto.html">Contacto</a>
+        </nav>
+    </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                Lo quieres, te lo vendo
-            </a>
+    <main class="mt-[5%] p-[20px] text-center">
 
-            <div>
-                <a class="btn btn-outline-light me-2" href="index.html">
-                    Inicio
-                </a>
+        <h2 class="mb-4 font-bold text-[24px]">Estadísticas de ventas</h2>
 
-                <a class="btn btn-outline-light" href="contacto.html">
-                    Contacto
-                </a>
-            </div>
-        </div>
-    </nav>
+        <div class="overflow-x-auto">
 
-    <main class="container mt-5">
-
-        <h1 class="text-center mb-4">Estadísticas de ventas</h1>
-
-        <div class="table-responsive">
-
-            <table id="tablaEstadisticas" class="display table table-striped">
-                <thead>
+            <table id="tablaEstadisticas" class="display w-full border-collapse text-[15px] [&_td]:border [&_td]:p-[15px] [&_th]:border [&_th]:p-[15px] [&_th]:text-left">
+                <thead class="bg-[blue] text-white">
                     <tr>
                         <th>Producto</th>
                         <th>Categoría</th>
@@ -142,6 +129,10 @@
 
     </main>
 
+    <footer class="mt-[30%] bg-black p-[15px] text-center text-white">
+        <p>Equipo: Benjamín Cubillos - Cristobal Pardo - Renato Troncoso | 2026</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
@@ -153,7 +144,7 @@
     </script>
 
 
-    <script src="funciones.js"></script>
+    <script src="./assets/js/funciones.js"></script>
 
 </body>
 </html>
