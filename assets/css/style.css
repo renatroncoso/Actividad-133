@@ -1,4 +1,5 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -7,6 +8,8 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -161,29 +164,20 @@
   }
 }
 @layer utilities {
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
+  .m-0 {
+    margin: 0px;
   }
-  .me-2 {
-    margin-inline-end: calc(var(--spacing) * 2);
+  .mt-\[5\%\] {
+    margin-top: 5%;
   }
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
+  .mt-\[30\%\] {
+    margin-top: 30%;
+  }
+  .mr-\[15px\] {
+    margin-right: 15px;
+  }
+  .mr-\[20\%\] {
+    margin-right: 20%;
   }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
@@ -191,10 +185,100 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
-  .table {
-    display: table;
+  .ml-\[20\%\] {
+    margin-left: 20%;
+  }
+  .block {
+    display: block;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-\[blue\] {
+    background-color: blue;
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .p-\[15px\] {
+    padding: 15px;
+  }
+  .p-\[20px\] {
+    padding: 20px;
   }
   .text-center {
     text-align: center;
+  }
+  .font-\[Arial\,sans-serif\] {
+    font-family: Arial,sans-serif;
+  }
+  .font-\[Arial\] {
+    font-family: Arial;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .leading-\[1\.6\] {
+    --tw-leading: 1.6;
+    line-height: 1.6;
+  }
+  .text-\[\#333\] {
+    color: #333;
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .\[\&_td\]\:border td {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .\[\&_td\]\:p-\[15px\] td {
+    padding: 15px;
+  }
+  .\[\&_th\]\:border th {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .\[\&_th\]\:p-\[15px\] th {
+    padding: 15px;
+  }
+  .\[\&_th\]\:text-left th {
+    text-align: left;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-leading: initial;
+    }
   }
 }
