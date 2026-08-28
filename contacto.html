@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./assets/css/style.css" rel="stylesheet"/>
+        <title>Contacto | Mi ECommerce</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Mi ECommerce</h1>
+
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Formulario de contacto</h2>
+
+            <form onsubmit="return validarFormulario()">
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo">
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="telefono">
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Enviar
+                </button>
+
+            </form>
+        </main>
+
+        <footer>
+            <p>
+                Equipo: Benjamín Cubillos - Cristobal Pardo -
+                Renato Troncoso | 2026
+            </p>
+        </footer>
+        <script src="funciones.js"></script>
+    </body>
+</html>
