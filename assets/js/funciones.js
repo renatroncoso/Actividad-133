@@ -30,3 +30,25 @@ function validarFormulario() {
     alert("Formulario enviado correctamente.");
     return true;
 }
+
+const botonesFiltro = document.querySelectorAll(".filtro");
+const productos = document.querySelectorAll(".producto");
+
+botonesFiltro.forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const categoria = boton.dataset.categoria;
+
+        botonesFiltro.forEach((item) => {
+            item.classList.remove("bg-blue-700", "text-white");
+            item.classList.add("bg-white", "text-blue-700", "shadow");
+        });
+
+        boton.classList.remove("bg-white", "text-blue-700", "shadow");
+        boton.classList.add("bg-blue-700", "text-white");
+
+        productos.forEach((producto) => {
+            const mostrar = categoria === "todos" || producto.dataset.categoria === categoria;
+            producto.classList.toggle("hidden", !mostrar);
+        });
+    });
+});
